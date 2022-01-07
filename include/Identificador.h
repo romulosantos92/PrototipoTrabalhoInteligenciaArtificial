@@ -15,7 +15,7 @@ class Identificador
 		int getIdTabuleiro();
 		void setIdTabuleiro(int id);
 		int getIdJoaninhas();
-		void setIdJoaninhas();
+		void setIdJoaninhas(int id);
 		
 		bool ehIgual(Identificador* id); //Corrigir na UML
 		
