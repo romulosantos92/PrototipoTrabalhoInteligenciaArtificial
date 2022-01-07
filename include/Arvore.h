@@ -20,7 +20,7 @@ class Arvore
     protected:
 
     private:
-        list<Estado>* estados;
+        list<Identificador>* estados;
         int geraTamanhoVetorHashing();
         int tamanhoVetorHashing;
 };
