@@ -13,9 +13,11 @@ class Buscas
         Buscas();
         virtual ~Buscas();
 
-        static NoArvore geraEstadoInicial();
-        static list<NoArvore> buscaEmProfundidade(NoArvore estadoInicial);
-        static list<NoArvore> buscaEmLargura(NoArvore estadoInicial);
+        static NoArvore geraEstadoInicial(); //Adicionar ao UML
+        static list<NoArvore> buscaEmProfundidade(NoArvore* estadoInicial);
+        static list<NoArvore> buscaEmLargura(NoArvore* estadoInicial);
+        static void aplicaRegrasDeTransicao(NoArvore* no);
+        static void geraFilhos(NoArvore*); //Corrigir na UML
 
     protected:
 
