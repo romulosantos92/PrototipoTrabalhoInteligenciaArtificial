@@ -14,7 +14,7 @@ class Tabuleiro
         static const int TabuleiroX = 4;
         static const int tabuleiroY = 4;
         static const int nJoaninhas = 4;
-        static const int indiceJoaninhaParada = nJoaninhas-1; ///Por padrão será a última do vetor
+        static const int indiceJoaninhaParada = nJoaninhas-1; ///Por padrão será a última do vetor. Corrigir na UML
 
         Tabuleiro();
         Tabuleiro(const Tabuleiro &tab); ///Copy constructor de Tabuleiro
