@@ -6,6 +6,7 @@
 #include "Tabuleiro.h"
 #include <cmath>
 #include "Estado.h"
+#include "Identificador"
 
 using namespace std;
 
@@ -17,17 +18,19 @@ class NoArvore
         NoArvore(const NoArvore &no);   ///Copy constructor para NoArvore
         virtual ~NoArvore();
 
-        int geraIdentificador();
-        Tabuleiro* getTabuleiro();
-        list<NoArvore*> getFilhos();
+        Identificador geraIdentificador();
         void insereFilho(NoArvore* filho);
-        Estado* geraEstado();
+        NoArvore* getPrimeiroFilho();
+        NoArvore* getUltimoFilho();
+        Tabuleiro* getTabuleiro(); //Verificar e corrigir na UML
+        list<NoArvore*> getFilhos(); //Remover da implementação
+        Estado* geraEstado(); //Remover da implementação
 
     protected:
 
     private:
         Tabuleiro tabuleiro;
-        int identificador;
+        Identificador identificador;
         list<NoArvore*> filhos;
 };
 
