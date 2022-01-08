@@ -3,6 +3,8 @@
 Joaninha::Joaninha()
 {
     //ctor
+    this->x = 0;
+    this->y = 0;
 }
 
 Joaninha::Joaninha(int x, int y)

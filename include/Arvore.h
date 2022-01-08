@@ -4,7 +4,6 @@
 #include <iostream>
 #include <list>
 #include "NoArvore.h"
-#include "Estado.h"
 
 using namespace std;
 
@@ -15,12 +14,12 @@ class Arvore
         virtual ~Arvore();
 
         bool estadoJaFoiVisitado(NoArvore estadoAtual);
-        void insereEstado(Estado estado);
+        void insereEstadoVisitado(Identificador estado);
 
     protected:
 
     private:
-        list<Identificador>* estados;
+        list<Identificador>* estadosJaVisitados;
         int geraTamanhoVetorHashing();
         int tamanhoVetorHashing;
 };

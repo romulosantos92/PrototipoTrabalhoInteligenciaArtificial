@@ -5,8 +5,7 @@
 #include <list>
 #include "Tabuleiro.h"
 #include <cmath>
-#include "Estado.h"
-#include "Identificador"
+#include "Identificador.h"
 
 using namespace std;
 
@@ -22,9 +21,7 @@ class NoArvore
         void insereFilho(NoArvore* filho);
         NoArvore* getPrimeiroFilho();
         NoArvore* getUltimoFilho();
-        Tabuleiro* getTabuleiro(); //Verificar e corrigir na UML
-        list<NoArvore*> getFilhos(); //Remover da implementação
-        Estado* geraEstado(); //Remover da implementação
+        Tabuleiro* getTabuleiro();
 
     protected:
 

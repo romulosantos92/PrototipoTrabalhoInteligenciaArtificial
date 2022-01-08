@@ -36,12 +36,14 @@
 		</Compiler>
 		<Unit filename="include/Arvore.h" />
 		<Unit filename="include/Buscas.h" />
+		<Unit filename="include/Identificador.h" />
 		<Unit filename="include/Joaninha.h" />
 		<Unit filename="include/NoArvore.h" />
 		<Unit filename="include/Tabuleiro.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arvore.cpp" />
 		<Unit filename="src/Buscas.cpp" />
+		<Unit filename="src/Identificador.cpp" />
 		<Unit filename="src/Joaninha.cpp" />
 		<Unit filename="src/NoArvore.cpp" />
 		<Unit filename="src/Tabuleiro.cpp" />

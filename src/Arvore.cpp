@@ -3,8 +3,7 @@
 Arvore::Arvore()
 {
     this->tamanhoVetorHashing = this->geraTamanhoVetorHashing();
-    cout << "tvh" << tamanhoVetorHashing << endl;
-    this->estados = new list<Estado>[tamanhoVetorHashing];
+    this->estadosJaVisitados = new list<Identificador>[tamanhoVetorHashing];
 }
 
 Arvore::~Arvore()
@@ -15,22 +14,21 @@ Arvore::~Arvore()
 bool Arvore::estadoJaFoiVisitado(NoArvore estadoAtual)
 {
 
-    list<Estado>::iterator iter;
+    list<Identificador>::iterator iter;
     //for(iter = estados[estado%tamanhoVetorHashing].begin(); iter != estados[estado%tamanhoVetorHashing].end(); iter++)
     {
         ///ToDo
     }
 }
 
-void Arvore::insereEstado(Estado estado)
+void Arvore::insereEstadoVisitado(Identificador estado)
 {
-    //estados[tamanhoVetorHashing%estado].push_back(estado);
-    ///todo
+
 }
 
 int Arvore::geraTamanhoVetorHashing()
 {
-    int tamanhoTabuleiro = (Tabuleiro::TabuleiroX * Tabuleiro::tabuleiroY)-1; ///-1 por causa da Joaninha que não mexe
+    int tamanhoTabuleiro = (Tabuleiro::TamanhoTabuleiro)-1; ///-1 por causa da Joaninha que não mexe
     int tamanhoVetorHashing = 1;
     for(int i = 0; i<Tabuleiro::nJoaninhas; i++)
     {

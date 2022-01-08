@@ -17,14 +17,24 @@ Tabuleiro::~Tabuleiro()
 {
     //dtor
 }
+
+///Converte coordenadas em índice linear
 int Tabuleiro::mapearCoordenadaMatrizLinear(int x, int y)
 {
     return x + y * TabuleiroX;
 }
 
+///Converte índice linear em coordenadas
+void Tabuleiro::converteIndiceLinear(int indice, int* x, int* y)
+{
+    *y = indice / tabuleiroY;
+    *x = indice % tabuleiroY;
+}
+
+///Zera o tabuleiro
 int Tabuleiro::clean()
 {
-    for(int i = 0; i<(TabuleiroX*tabuleiroY); i++)
+    for(int i = 0; i<(TamanhoTabuleiro); i++)
         this->tabuleiro[i] = 0;
 }
 
@@ -37,16 +47,19 @@ void Tabuleiro::atualizaTabuleiro()
     }
 }
 
+///Retorna com base no índice linear
 int Tabuleiro::getTabuleiro(int indice)
 {
     return this->tabuleiro[indice];
 }
 
+///retorna com base nas coordenadas
 int Tabuleiro::getTabuleiro(int x, int y)
 {
     return this->tabuleiro[mapearCoordenadaMatrizLinear(x, y)];
 }
 
+///seta uma posição do tabuleiro
 void Tabuleiro::setTabuleiro(int x, int y, int val)
 {
     this->tabuleiro[mapearCoordenadaMatrizLinear(x, y)] = val;
@@ -62,6 +75,7 @@ void Tabuleiro::print()
         }
         cout << endl;
     }
+    cout << endl;
 }
 
 Joaninha* Tabuleiro::getJoaninha(int indice)
@@ -69,3 +83,13 @@ Joaninha* Tabuleiro::getJoaninha(int indice)
     return &this->joaninhas[indice];
 }
 
+///retorna o índice com base nas coordenadas
+int Tabuleiro::getIndiceJoaninha(int x, int y)
+{
+    for(int i = 0; i < nJoaninhas; i++)
+    {
+        if(joaninhas[i].getX() == x && joaninhas[i].getY() == y)
+            return i;
+    }
+    return -1;
+}

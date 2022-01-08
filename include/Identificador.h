@@ -2,6 +2,9 @@
 #define IDENTIFICADOR_H
 
 #include<iostream>
+#include<cmath>
+
+#include "Tabuleiro.h"
 
 using namespace std;
 
@@ -10,23 +13,25 @@ class Identificador
 	public:
 		Identificador();
 		Identificador(const Identificador &id); ///Copy constructor para identificador;
-		virtual ~~Identificador();
-		
+		virtual ~Identificador();
+
 		int getIdTabuleiro();
 		void setIdTabuleiro(int id);
 		int getIdJoaninhas();
 		void setIdJoaninhas(int id);
-		
+
 		bool ehIgual(Identificador* id); //Corrigir na UML
-		
+		int converteTabuleiroEmInt(Tabuleiro tabuleiro); // Corrigir na UML
+		int converteJoaninhasEmInt(Tabuleiro tabuleiro); // Corrigir na UML
+		void print();
+
 	protected:
-	
+
 	private:
 		int idTabuleiro;
 		int idJoaninhas;
-		
-		int converteTabuleiroEmInt(Tabuleiro tabuleiro);
-		int converteJoaninhasEmInt(Joaninha joaninhas[], int tam); // Corrigir na UML
-}
+
+
+};
 
 #endif // IDENTIFICADOR_H
