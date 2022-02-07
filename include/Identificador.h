@@ -20,9 +20,10 @@ class Identificador
 		int getIdJoaninhas();
 		void setIdJoaninhas(int id);
 
-		bool ehIgual(Identificador* id); //Corrigir na UML
+		bool ehIgual(Identificador id); //Corrigir na UML
 		int converteTabuleiroEmInt(Tabuleiro tabuleiro); // Corrigir na UML
 		int converteJoaninhasEmInt(Tabuleiro tabuleiro); // Corrigir na UML
+		void atualizaIdentificador(Tabuleiro Tabuleiro); // corr.
 		void print();
 
 	protected:

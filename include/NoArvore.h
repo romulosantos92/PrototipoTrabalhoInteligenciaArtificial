@@ -18,10 +18,15 @@ class NoArvore
         virtual ~NoArvore();
 
         Identificador geraIdentificador();
+        Identificador getIdentificador();
         void insereFilho(NoArvore* filho);
+        void imprimeFilhos();
         NoArvore* getPrimeiroFilho();
         NoArvore* getUltimoFilho();
+        list<NoArvore*> getFilhos();
         Tabuleiro* getTabuleiro();
+        bool estadoValido();
+        void print();
 
     protected:
 

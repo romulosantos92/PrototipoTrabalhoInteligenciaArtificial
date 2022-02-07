@@ -5,7 +5,10 @@ using namespace std;
 
 int main()
 {
-    Arvore arv;
+    NoArvore no = Buscas::geraEstadoInicial();
+    Arvore arv(&no);
+    arv.montaArvore();
+
 
     return 0;
 }

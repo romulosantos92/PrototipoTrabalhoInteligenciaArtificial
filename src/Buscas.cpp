@@ -10,19 +10,6 @@ Buscas::~Buscas()
     //dtor
 }
 
-list<NoArvore> buscaEmProfundidade(NoArvore estadoInicial)
-{
-    list<NoArvore> solucao;
-    ///ToDo
-    return solucao;
-}
-
-list<NoArvore> buscaEmLargura(NoArvore estadoInicial)
-{
-    list<NoArvore> solucao;
-    ///ToDo
-    return solucao;
-}
 
 NoArvore Buscas::geraEstadoInicial()
 {
@@ -44,3 +31,18 @@ NoArvore Buscas::geraEstadoInicial()
 
     return estadoInicial;
 }
+
+list<NoArvore> buscaEmProfundidade(NoArvore estadoInicial)
+{
+    list<NoArvore> solucao;
+    ///ToDo
+    return solucao;
+}
+
+list<NoArvore> buscaEmLargura(NoArvore estadoInicial)
+{
+    list<NoArvore> solucao;
+    ///ToDo
+    return solucao;
+}
+

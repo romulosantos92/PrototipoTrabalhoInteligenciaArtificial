@@ -31,6 +31,8 @@ class Tabuleiro
         void print();
         Joaninha* getJoaninha(int indice);
         int getIndiceJoaninha(int x, int y); //Adicionar ao UML
+        bool estaNaMesmaPosicao(Joaninha j1, Joaninha j2);
+        bool estaForaDoTabuleiro(Joaninha j);
 
 
     protected:

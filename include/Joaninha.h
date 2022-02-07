@@ -17,6 +17,7 @@ class Joaninha
         void setX(int x);
         int getY();
         void setY(int y);
+        void movimenta(int posicao);///UML
 
     protected:
 

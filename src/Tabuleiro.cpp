@@ -43,8 +43,9 @@ void Tabuleiro::atualizaTabuleiro()
     this->clean();
     for(int i = 0; i < nJoaninhas; i++)
     {
-        tabuleiro[mapearCoordenadaMatrizLinear(joaninhas[i].getX(), joaninhas[i].getY())] = 1;
+        tabuleiro[mapearCoordenadaMatrizLinear(joaninhas[i].getX(), joaninhas[i].getY())] = i+1;
     }
+
 }
 
 ///Retorna com base no índice linear
@@ -92,4 +93,18 @@ int Tabuleiro::getIndiceJoaninha(int x, int y)
             return i;
     }
     return -1;
+}
+
+bool Tabuleiro::estaNaMesmaPosicao(Joaninha j1, Joaninha j2)
+{
+    if((j1.getX() == j2.getX()) && (j1.getY() == j2.getY()))
+        return true;
+    return false;
+}
+
+bool Tabuleiro::estaForaDoTabuleiro(Joaninha j)
+{
+    if((j.getX()<0||j.getX()>=Tabuleiro::TabuleiroX)||(j.getY()<0||j.getY()>=Tabuleiro::tabuleiroY))
+        return true;
+    return false;
 }

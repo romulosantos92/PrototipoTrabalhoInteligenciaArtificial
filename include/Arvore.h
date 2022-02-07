@@ -10,18 +10,25 @@ using namespace std;
 class Arvore
 {
     public:
-        Arvore();
+        Arvore(NoArvore* raiz);
         virtual ~Arvore();
 
         bool estadoJaFoiVisitado(NoArvore estadoAtual);
         void insereEstadoVisitado(Identificador estado);
+        NoArvore* getRaiz();
+
+        void printEstadosVisitados();
+        void montaArvore();
+        void auxMontaArvore(NoArvore* no, int nivel);
+        void geraFilhos(NoArvore*);
 
     protected:
 
     private:
-        list<Identificador>* estadosJaVisitados;
+        list<Identificador> estadosJaVisitados;
         int geraTamanhoVetorHashing();
         int tamanhoVetorHashing;
+        NoArvore* raiz;
 };
 
 #endif // ARVORE_H
